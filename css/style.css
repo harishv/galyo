@@ -383,14 +383,21 @@ header:after, .navgation:after, summary:after {
 .popular {
 	margin-bottom:10px;
 	position:relative;
-	color:#000;
+	color:#000000;
 	font-size:14px;
-}
-.popular p {
-	margin-bottom:10px;
 }
 .popular .small {
 	font-size:11px;
+}
+.popular .news-item {
+	width: 100%;
+}
+.popular .news-graphic {
+	float: left;
+	margin-right: 10px;
+}
+.popular .news-graphic img {
+	width: 50%;
 }
 .twitter-cont {
 	color:#000;

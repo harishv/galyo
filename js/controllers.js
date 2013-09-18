@@ -22,6 +22,11 @@ app.factory('gallyoHomePageService', function ($http) {
 			return $http.get('http://wildridge.net/api/news/topnews?n=' + count).then(function (result) {
 				return result.data.rows;
 			});
+		},
+		getTopNewsWithImages: function (count) {
+			return $http.get('http://wildridge.net/api/news/topnews_with_images?n=' + count).then(function (result) {
+				return result.data.rows;
+			});
 		}
 	};
 });
@@ -36,6 +41,8 @@ app.controller('GallyoHome', function ($scope, gallyoHomePageService, $window) {
 	$scope.latestVideo = gallyoHomePageService.getLatestOneVideo();
 	// Top 5 News items
 	$scope.top5 = gallyoHomePageService.getTopNews(5);
+	// Top 5 News items with Graphics
+	$scope.topNewsAndGraphics = gallyoHomePageService.getTopNewsWithImages(5);
 
     // Set the hiro player's playlist with the latest video after getting the valid Video's Object
 	$scope.$watch('latestVideo', function (videoObj) {

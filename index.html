@@ -227,41 +227,11 @@
             </div>
 
             <div class="module-inner">
-              <div class="row">
-                <span class="width40">
-                  <img src="/images/popular-stories-thumb1.jpg"/>
-                </span>
-                <span class="width60">
-                  <p class="small">MEDIA</p>
-                  <p>Shocking: Glenn Greenwald's Partner Detained</p>
-                </span>
-              </div>
-              <div class="row">
-                <span class="width40">
-                  <img src="/images/popular-stories-thumb2.jpg"/>
-                </span>
-                <span class="width60">
-                  <p class="small">BUSINESS</p>
-                  <p>Feds Open Bribery Investigation</p>
-                </span>
-              </div>
-              <div class="row">
-                <span class="width40">
-                  <img src="/images/popular-stories-thumb3.jpg"/>
-                </span>
-                <span class="width60">
-                  <p class="small">WORLD</p>
-                  <p>Dozens Of Muslim Brotherhood Detainees Killed</p>
-                </span>
-              </div>
-              <div class="row">
-                <span class="width40">
-                  <img src="/images/popular-stories-thumb4.jpg"/>
-                </span>
-                <span class="width60">
-                  <p class="small">Sport</p>
-                  <p>Chaos Erupts After A-Rod Plunked </p>
-                </span>
+              <div class="row" ng-repeat="n in topNewsAndGraphics">
+                <div class="news-item">
+                  <img class="news-graphic" ng-src="http://cdee2b9f4d70bbbec792-dc1168873264971973cbf6ea4d0b36c7.r91.cf2.rackcdn.com/{{n.value.thumbnail}}"/>
+                  <p>{{n.value.title}}</p>
+                </div>
               </div>
               <a href="http://wildridge.net/" class="more">More Stories</a>
             </div>
